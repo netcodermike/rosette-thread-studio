@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Change point counts and modular multipliers to draw intricate circular string-art patterns.">
+  <title>Rosette Thread Studio</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.mjs"></script>
+</head>
+<body>
+<main>
+  <div class="heading">
+    <div><h1>Rosette Thread Studio</h1><p>Change point counts and modular multipliers to draw intricate circular string-art patterns.</p></div>
+    <a href="https://github.com/netcodermike/rosette-thread-studio">Project source ↗</a>
+  </div>
+  <div class="workspace">
+    <section class="panel stage" aria-label="Project workspace">
+      <canvas width="760" height="570" aria-label="Modular rosette with colored chords"></canvas>
+      <p id="reading" role="status"></p>
+    </section>
+    <section class="panel controls" aria-label="Controls">
+      <form id="settings"><label for="points">Anchor points<output id="points-value" for="points"></output><input id="points" type="range" min="40" max="360" step="1" value="180"></label><label for="factor">Multiplier<output id="factor-value" for="factor"></output><input id="factor" type="range" min="2" max="80" step="1" value="37"></label><button id="png" type="button">Download PNG</button><p>Each thread joins anchor i to (i × multiplier) mod the number of anchors.</p></form>
+    </section>
+  </div>
+</main>
+</body>
+</html>
